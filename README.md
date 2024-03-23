@@ -14,4 +14,4 @@ le champs temps-et-date a 5 champs non séparés par des espaces et qui permette
 | weekday   | 0-6, 0 = dimanche       |
 
 
-Dans ce projet je vous propose de découvrir une tâche de sauvegarde automatique planifiée pour s'exécuter tous les jours à 
+Dans ce projet je vous propose de découvrir une tâche de sauvegarde automatique planifiée pour s'exécuter tous les jours à 00h
