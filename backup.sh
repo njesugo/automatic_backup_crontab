@@ -15,18 +15,14 @@ then
   exit
 fi
 
-# [TASK 1]
 targetDirectory=$1
 destinationDirectory=$2
 
-# [TASK 2]
 echo "$1"
 echo "$2"
 
-# [TASK 3]
 currentTS=`date +%s`
 
-# [TASK 4]
 backupFileName="backup-$currentTS.tar.gz"
 
 # We're going to:
@@ -35,37 +31,28 @@ backupFileName="backup-$currentTS.tar.gz"
   # 3: Move the backup file to the destination directory
 
 # To make things easier, we will define some useful variables...
-
-# [TASK 5]
 origAbsPath=`pwd`
 
-# [TASK 6]
 cd $destinationDirectory
 destDirAbsPath=`pwd`
 
-# [TASK 7]
 cd $origAbsPath
 cd $targetDirectory
 
-# [TASK 8]
 yesterdayTS=$(( $currentTS-24*60*60 ))
 
 declare -a toBackup
 
-for file in $(ls) # [TASK 9]
+for file in $(ls)
 do
-  # [TASK 10]
   if [ `date -r $file +%s` -gt $yesterdayTS ]
   then
-    # [TASK 11]
     toBackup+=($file)
   fi
 done
 
-# [TASK 12]
 tar -zcvf $backupFileName ${toBackup[@]}
 
-# [TASK 13]
 mv $backupFileName $destDirAbsPath
 
 # Congratulations! You completed the final project for this course!
