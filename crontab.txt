@@ -1,0 +1,10 @@
+# This is the line which contain our task 
+# Remember to include the full path to the backup.sh file 
+
+0 0 * * * backup.sh target_directory_name destination_directory_name
+
+# 0 minute
+# 0 hour
+# * everyday in the month
+# * every month
+# * every day in the week
